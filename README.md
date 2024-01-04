@@ -38,6 +38,7 @@ sudo nginx -s reload
 
 create a .js file for nginx and upload the file to ../etc/nginix/siteavailible
 example content for a node application 
+```
 server {
     listen 80;
     server_name {{domain or subdomain}} ;
@@ -53,27 +54,32 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 }
+```
 
 after uploading the yourapp.js file to ../etc/nginix/siteavailible 
+```
 sudo ln -s /etc/nginx/sites-available/{the name of the nginx file} /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo nginx -s reload
-
+```
 
 # to update the nginx 
-sudo rm /etc/nginx/sites-enabled/api.propverse
+`sudo rm /etc/nginx/sites-enabled/api.propverse`
 # appling certibot
-sudo certbot --nginx -d {{domain or sub-domain}}
+`sudo certbot --nginx -d {{domain or sub-domain}}`
 # auto renew
+```
 sudo certbot renew --dry-run
 sudo chmod 777 -R /var/www/yourapp
+```
 
 after checking the all the above instrctions configured properly go to the project directory form putty and run 
 # to add the service in pm2 process
-pm2 start npm --name "{{name of your app}}" -- start
+`pm2 start npm --name "{{name of your app}}" -- start`
 
 
 # to install node to a spacific version 
+```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
@@ -81,12 +87,14 @@ nvm list-remote
 nvm install v16.14.0
 nvm list
 node -v
+```
 # removing node form server 
+```
 sudo apt remove nodejs
 sudo apt purge nodejs
 nvm current
 nvm uninstall node_version
 nvm deactivate
-
+```
 
 
