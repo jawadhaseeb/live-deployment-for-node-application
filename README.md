@@ -24,14 +24,16 @@ the personal access token can b found in your github web account go to settings/
       for the first time it is recomended to deploy the application manually once deployed and runing it will be easier to hander the deployment through github actions
 
 to install nginx
-```sudo apt update
+```
+sudo apt update
 sudo apt install nginx
 sudo ufw app list
 sudo ufw allow 'Nginx Full'
 sudo ufw allow 'OpenSSH'
 sudo ufw status
 sudo nginx -t
-sudo nginx -s reload```
+sudo nginx -s reload
+```
 
 
 create a .js file for nginx and upload the file to ../etc/nginix/siteavailible
