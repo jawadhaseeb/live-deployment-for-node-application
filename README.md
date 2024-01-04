@@ -8,7 +8,7 @@ git clone #link to your replo#>
 configur git credentioals globally through your public access key and user name 
 # to store git credentials run the following command 
 
-'git config --global credential.helper store'
+`git config --global credential.helper store`
 after running the commang you can run git clone, git fetch, get pull once the command is executed it will ask for the credentials please provide your
 github username
 and personal access token
